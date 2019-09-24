@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary  mb-3">
+  <a class="navbar-brand" href="#">MAIN</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="/">home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">ABOUT</a>
+      </li>
+    </ul>
+
+
+    <ul class="navbar-nav   ml-auto">
+
+
+
+      {{#if  user}}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          想学的课程
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/ideas">想学</a>
+          <a class="dropdown-item" href="/ideas/add">添加</a>
+
+        </div>
+        <li class="nav-item">
+        <a class="nav-link" href="/users/logout">退出</a>
+      </li>
+      </li>
+
+      {{else}}
+
+      <li class="nav-item ">
+        <a class="nav-link" href="/users/login">登录</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users/register">注册</a>
+      </li>
+      {{/if}}
+
+    </ul>
+  </div>
+</nav>
